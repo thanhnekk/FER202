@@ -7,6 +7,9 @@ import Slider from "../../../component/Slider";
 import FeaturedCategories from "../../../component/FeaturedCategories";
 import SaleProducts from "../../../component/SaleProduct";
 import NewArrivals from "../../../component/NewArrivals";
+import OccasionTabs from "../../../component/OccasionTabs";
+import Banner from "../../../component/Banner";
+import Footer from "../../../component/Footer";
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -42,7 +45,15 @@ const HomePage = () => {
       <Slider sliders={sliders}></Slider>
       <FeaturedCategories categories={categories}></FeaturedCategories>
       <SaleProducts products={products}></SaleProducts>
+      <Banner></Banner>
       <NewArrivals products={products}></NewArrivals>
+      <img
+        src="../assets/user/image/banner03.png"
+        alt="banner01"
+        style={{ width: "100%" }}
+      />
+      <OccasionTabs products={products}></OccasionTabs>
+      <Footer></Footer>
     </div>
   );
 };

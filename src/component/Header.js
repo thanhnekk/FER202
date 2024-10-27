@@ -23,7 +23,6 @@ const Header = ({ categories }) => {
           zIndex: 10,
         }}
       >
-        {/* Button to open sidebar (Mobile) */}
         <Button className="d-lg-none" variant="light" onClick={handleShow}>
           <i className="bi bi-list" style={{ fontSize: "1.5rem" }}></i>
         </Button>
@@ -48,9 +47,29 @@ const Header = ({ categories }) => {
             }}
           >
             <li style={{ cursor: "pointer" }}>Hàng mới về</li>
-            <li style={{ cursor: "pointer" }}>Home</li>
+            <li>
+              <a
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+                href="/"
+              >
+                Home
+              </a>
+            </li>
             <li className="d-flex align-items-center">
-              <span style={{ cursor: "pointer" }}>Sản phẩm</span>
+              <a
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+                href="/products/all"
+              >
+                Sản phẩm
+              </a>
               <Dropdown>
                 <Dropdown.Toggle
                   variant="light"

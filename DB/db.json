@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Quần",
-      "image_link": "../assets/user/image/category_quan.png",
-      "status": "Active",
+      "image_link": "/assets/user/image/category_quan.png",
+      "status": "Activate",
       "subcategories": [
         {
           "id": 1,
@@ -17,18 +17,14 @@
         {
           "id": 3,
           "name": "Quần short"
-        },
-        {
-          "id": 4,
-          "name": "Quần trong bộ Vest"
         }
       ]
     },
     {
       "id": 2,
       "name": "Áo",
-      "image_link": "../assets/user/image/category_ao.png",
-      "status": "Active",
+      "image_link": "/assets/user/image/category_ao.png",
+      "status": "Activate",
       "subcategories": [
         {
           "id": 1,
@@ -55,8 +51,8 @@
     {
       "id": 3,
       "name": "Đầm",
-      "image_link": "../assets/user/image/category_dam.png",
-      "status": "Active",
+      "image_link": "/assets/user/image/category_dam.png",
+      "status": "Activate",
       "subcategories": [
         {
           "id": 1,
@@ -91,8 +87,8 @@
     {
       "id": 4,
       "name": "Chân váy",
-      "image_link": "../assets/user/image/category_chanvay.png",
-      "status": "Active",
+      "image_link": "/assets/user/image/category_chanvay.png",
+      "status": "Activate",
       "subcategories": [
         {
           "id": 1,
@@ -115,8 +111,8 @@
     {
       "id": 5,
       "name": "Phụ kiện",
-      "image_link": "../assets/user/image/category_phukien.png",
-      "status": "Active",
+      "image_link": "/assets/user/image/category_phukien.png",
+      "status": "Activate",
       "subcategories": [
         {
           "id": 1,
@@ -133,20 +129,20 @@
     {
       "id": 1,
       "title": "Slider 1",
-      "image_link": "../assets/user/image/slider_1.png",
-      "status": "Active"
+      "image_link": "/assets/user/image/slider_1.png",
+      "status": "Activate"
     },
     {
       "id": 2,
       "title": "Slider 2",
-      "image_link": "../assets/user/image/slider_2.png",
-      "status": "Active"
+      "image_link": "/assets/user/image/slider_2.png",
+      "status": "Activate"
     },
     {
       "id": 3,
       "title": "Slider 3",
-      "image_link": "../assets/user/image/slider_3.png",
-      "status": "Active"
+      "image_link": "/assets/user/image/slider_3.png",
+      "status": "Activate"
     }
   ],
   "products": [
@@ -159,12 +155,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 100
@@ -178,11 +175,12 @@
       "salePrice": 320000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p2.1.jpg",
-        "../assets/user/image/product/p2.2.jpg",
-        "../assets/user/image/product/p2.3.jpg"
+        "/assets/user/image/product/p2.1.jpg",
+        "/assets/user/image/product/p2.2.jpg",
+        "/assets/user/image/product/p2.3.jpg"
       ],
       "soldQuantity": 30,
       "inStock": 80
@@ -196,12 +194,13 @@
       "salePrice": 370000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p3.1.jpg",
-        "../assets/user/image/product/p3.2.jpg",
-        "../assets/user/image/product/p3.3.jpg",
-        "../assets/user/image/product/p3.4.jpg"
+        "/assets/user/image/product/p3.1.jpg",
+        "/assets/user/image/product/p3.2.jpg",
+        "/assets/user/image/product/p3.3.jpg",
+        "/assets/user/image/product/p3.4.jpg"
       ],
       "soldQuantity": 20,
       "inStock": 50
@@ -215,11 +214,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p4.1.jpg",
-        "../assets/user/image/product/p4.2.jpg",
-        "../assets/user/image/product/p4.3.jpg"
+        "/assets/user/image/product/p4.1.jpg",
+        "/assets/user/image/product/p4.2.jpg",
+        "/assets/user/image/product/p4.3.jpg"
       ],
       "soldQuantity": 10,
       "inStock": 30
@@ -233,12 +233,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p5.1.jpg",
-        "../assets/user/image/product/p5.2.jpg",
-        "../assets/user/image/product/p5.3.jpg",
-        "../assets/user/image/product/p5.4.jpg"
+        "/assets/user/image/product/p5.1.jpg",
+        "/assets/user/image/product/p5.2.jpg",
+        "/assets/user/image/product/p5.3.jpg",
+        "/assets/user/image/product/p5.4.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 25
@@ -252,12 +253,13 @@
       "salePrice": 550000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p6.1.jpg",
-        "../assets/user/image/product/p6.2.jpg",
-        "../assets/user/image/product/p6.2.jpg",
-        "../assets/user/image/product/p6.2.jpg"
+        "/assets/user/image/product/p6.1.jpg",
+        "/assets/user/image/product/p6.2.jpg",
+        "/assets/user/image/product/p6.2.jpg",
+        "/assets/user/image/product/p6.2.jpg"
       ],
       "soldQuantity": 25,
       "inStock": 70
@@ -271,11 +273,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p7.1.jpg",
-        "../assets/user/image/product/p7.2.jpg",
-        "../assets/user/image/product/p7.3.jpg"
+        "/assets/user/image/product/p7.1.jpg",
+        "/assets/user/image/product/p7.2.jpg",
+        "/assets/user/image/product/p7.3.jpg"
       ],
       "soldQuantity": 5,
       "inStock": 15
@@ -289,11 +292,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p8.1.jpg",
-        "../assets/user/image/product/p8.2.jpg",
-        "../assets/user/image/product/p8.3.jpg"
+        "/assets/user/image/product/p8.1.jpg",
+        "/assets/user/image/product/p8.2.jpg",
+        "/assets/user/image/product/p8.3.jpg"
       ],
       "soldQuantity": 40,
       "inStock": 90
@@ -307,11 +311,12 @@
       "salePrice": 400000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p9.1.jpg",
-        "../assets/user/image/product/p9.2.jpg",
-        "../assets/user/image/product/p9.3.jpg"
+        "/assets/user/image/product/p9.1.jpg",
+        "/assets/user/image/product/p9.2.jpg",
+        "/assets/user/image/product/p9.3.jpg"
       ],
       "soldQuantity": 35,
       "inStock": 60
@@ -325,12 +330,13 @@
       "salePrice": 500000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p10.1.png",
-        "../assets/user/image/product/p10.2.png",
-        "../assets/user/image/product/p10.3.png",
-        "../assets/user/image/product/p10.4.png"
+        "/assets/user/image/product/p10.1.png",
+        "/assets/user/image/product/p10.2.png",
+        "/assets/user/image/product/p10.3.png",
+        "/assets/user/image/product/p10.4.png"
       ],
       "soldQuantity": 20,
       "inStock": 50
@@ -344,11 +350,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p11.1.png",
-        "../assets/user/image/product/p11.2.png",
-        "../assets/user/image/product/p11.3.png"
+        "/assets/user/image/product/p11.1.png",
+        "/assets/user/image/product/p11.2.png",
+        "/assets/user/image/product/p11.3.png"
       ],
       "soldQuantity": 30,
       "inStock": 80
@@ -362,12 +369,13 @@
       "salePrice": 280000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p12.1.png",
-        "../assets/user/image/product/p12.2.png",
-        "../assets/user/image/product/p12.3.png",
-        "../assets/user/image/product/p12.4.png"
+        "/assets/user/image/product/p12.1.png",
+        "/assets/user/image/product/p12.2.png",
+        "/assets/user/image/product/p12.3.png",
+        "/assets/user/image/product/p12.4.png"
       ],
       "soldQuantity": 40,
       "inStock": 100
@@ -381,12 +389,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p13.1.png",
-        "../assets/user/image/product/p13.2.png",
-        "../assets/user/image/product/p13.2.png",
-        "../assets/user/image/product/p14.2.png"
+        "/assets/user/image/product/p13.1.png",
+        "/assets/user/image/product/p13.2.png",
+        "/assets/user/image/product/p13.2.png",
+        "/assets/user/image/product/p14.2.png"
       ],
       "soldQuantity": 25,
       "inStock": 60
@@ -400,11 +409,12 @@
       "salePrice": 400000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Sport",
       "images": [
-        "../assets/user/image/product/p14.1.png",
-        "../assets/user/image/product/p14.2.png",
-        "../assets/user/image/product/p14.3.png"
+        "/assets/user/image/product/p14.1.png",
+        "/assets/user/image/product/p14.2.png",
+        "/assets/user/image/product/p14.3.png"
       ],
       "soldQuantity": 20,
       "inStock": 50
@@ -418,11 +428,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p15.1.png",
-        "../assets/user/image/product/p15.2.png",
-        "../assets/user/image/product/p15.3.png"
+        "/assets/user/image/product/p15.1.png",
+        "/assets/user/image/product/p15.2.png",
+        "/assets/user/image/product/p15.3.png"
       ],
       "soldQuantity": 15,
       "inStock": 40
@@ -436,12 +447,12 @@
       "salePrice": 320000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p16.1.png",
-        "../assets/user/image/product/p16.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p16.1.png",
+        "/assets/user/image/product/p16.2.png",
+        "/assets/user/image/product/p16.3.png"
       ],
       "soldQuantity": 22,
       "inStock": 55
@@ -455,12 +466,12 @@
       "salePrice": 550000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p17.1.png",
+        "/assets/user/image/product/p17.2.png",
+        "/assets/user/image/product/p17.3.png"
       ],
       "soldQuantity": 10,
       "inStock": 30
@@ -474,14 +485,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p18.1.png",
+        "/assets/user/image/product/p18.2.png",
+        "/assets/user/image/product/p18.3.png"
       ],
-      "image": "path_to_image18.jpg",
       "soldQuantity": 30,
       "inStock": 70
     },
@@ -494,12 +504,12 @@
       "salePrice": 360000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p19.1.png",
+        "/assets/user/image/product/p19.2.png",
+        "/assets/user/image/product/p19.3.png"
       ],
       "soldQuantity": 15,
       "inStock": 25
@@ -508,435 +518,436 @@
       "id": 20,
       "name": "Quần Skorts",
       "categoryId": 1,
-      "subcategoryId": 2,
+      "subcategoryId": 3,
       "price": 480000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p20.1.png",
+        "/assets/user/image/product/p20.2.png",
+        "/assets/user/image/product/p20.3.png"
       ],
       "soldQuantity": 28,
       "inStock": 65
     },
     {
       "id": 21,
-      "name": "Áo Sơ Mi Trắng",
+      "name": "Áo Sơ Mi Tay Dài Cổ Nơ",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 300000,
       "salePrice": 280000,
       "isSale": true,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p21.1.jpg",
+        "/assets/user/image/product/p21.2.jpg",
+        "/assets/user/image/product/p21.3.jpg"
       ],
       "soldQuantity": 50,
       "inStock": 100
     },
     {
       "id": 22,
-      "name": "Áo Sơ Mi Xanh",
+      "name": "Áo Sơ Mi Tay Dài Dáng Sơ Vin",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 320000,
       "salePrice": null,
       "isSale": false,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p22.1.jpg",
+        "/assets/user/image/product/p22.2.jpg",
+        "/assets/user/image/product/p22.3.jpg"
       ],
       "soldQuantity": 40,
       "inStock": 80
     },
     {
       "id": 23,
-      "name": "Áo Sơ Mi Họa Tiết",
+      "name": "Áo Sơ Mi Cổ Chữ V",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 350000,
       "salePrice": 330000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p23.1.jpg",
+        "/assets/user/image/product/p23.2.jpg",
+        "/assets/user/image/product/p23.3.jpg"
       ],
       "soldQuantity": 35,
       "inStock": 60
     },
     {
       "id": 24,
-      "name": "Áo Sơ Mi Caro",
+      "name": "Áo Sơ Mi Tay Ngắn Dáng Sơ Vin",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 300000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p24.1.jpg",
+        "/assets/user/image/product/p24.2.jpg",
+        "/assets/user/image/product/p24.3.jpg"
       ],
       "soldQuantity": 25,
       "inStock": 50
     },
     {
       "id": 25,
-      "name": "Áo Sơ Mi Hồng",
+      "name": "Áo Sơ Mi Tay Dài Hồng",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 320000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p25.1.jpg",
+        "/assets/user/image/product/p25.2.jpg",
+        "/assets/user/image/product/p25.3.jpg"
       ],
       "soldQuantity": 20,
       "inStock": 45
     },
     {
       "id": 26,
-      "name": "Áo Sơ Mi Đen",
+      "name": "Áo Sơ Mi Tay Lỡ Dáng Sơ Vin",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 340000,
       "salePrice": 300000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p26.1.jpg",
+        "/assets/user/image/product/p26.2.jpg",
+        "/assets/user/image/product/p26.3.jpg"
       ],
       "soldQuantity": 30,
       "inStock": 70
     },
     {
       "id": 27,
-      "name": "Áo Sơ Mi Xanh Nhạt",
+      "name": "Áo Sơ Mi Cách Điệu",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 310000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p27.1.jpg",
+        "/assets/user/image/product/p27.2.jpg",
+        "/assets/user/image/product/p27.3.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 25
     },
     {
       "id": 28,
-      "name": "Áo Sơ Mi Tím",
+      "name": "Áo Sơ Mi Tay Dài Kẻ",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 350000,
       "salePrice": 330000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p28.1.jpg",
+        "/assets/user/image/product/p28.2.jpg",
+        "/assets/user/image/product/p28.3.jpg"
       ],
       "soldQuantity": 20,
       "inStock": 40
     },
     {
       "id": 29,
-      "name": "Áo Sơ Mi Đen Có Họa Tiết",
+      "name": "Áo Sơ Mi Tay Ngắn Cổ Nơ",
       "categoryId": 2,
       "subcategoryId": 1,
       "price": 370000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p29.1.jpg",
+        "/assets/user/image/product/p29.2.jpg",
+        "/assets/user/image/product/p29.3.jpg"
       ],
       "soldQuantity": 10,
       "inStock": 15
     },
     {
       "id": 30,
-      "name": "Áo Sơ Mi Xanh Biển",
+      "name": "Áo Dài Cách Tân",
       "categoryId": 2,
-      "subcategoryId": 1,
+      "subcategoryId": 2,
       "price": 320000,
       "salePrice": 310000,
       "isSale": true,
       "isNew": false,
-      "occasion": "Đi làm",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p30.1.jpg",
+        "/assets/user/image/product/p30.2.jpg",
+        "/assets/user/image/product/p30.3.jpg"
       ],
       "soldQuantity": 30,
       "inStock": 50
     },
     {
       "id": 31,
-      "name": "Đầm Dạ Hội",
+      "name": "Áo Dài Truyền Thống",
       "categoryId": 2,
-      "subcategoryId": 3,
+      "subcategoryId": 2,
       "price": 700000,
       "salePrice": 650000,
       "isSale": true,
       "isNew": true,
-      "occasion": "Party",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p31.1.jpg",
+        "/assets/user/image/product/p31.2.jpg",
+        "/assets/user/image/product/p31.3.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 30
     },
     {
       "id": 32,
-      "name": "Đầm Maxi",
+      "name": "Áo Dài Cách Tân Tay Bồng",
       "categoryId": 2,
-      "subcategoryId": 3,
+      "subcategoryId": 2,
       "price": 600000,
       "salePrice": null,
       "isSale": false,
       "isNew": false,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 20,
       "inStock": 50
     },
     {
       "id": 33,
-      "name": "Đầm Công Sở",
+      "name": "Áo Dài Lụa",
       "categoryId": 2,
-      "subcategoryId": 3,
+      "subcategoryId": 2,
       "price": 550000,
       "salePrice": 500000,
       "isSale": true,
       "isNew": false,
-      "occasion": "Đi làm",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p33.1.jpg",
+        "/assets/user/image/product/p33.2.jpg",
+        "/assets/user/image/product/p33.3.jpg"
       ],
       "soldQuantity": 25,
       "inStock": 40
     },
     {
       "id": 34,
-      "name": "Đầm Xòe",
+      "name": "Áo Cách Tân Tà Ngắn Phối Hồ Điệp",
       "categoryId": 2,
-      "subcategoryId": 3,
+      "subcategoryId": 2,
       "price": 620000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p34.1.jpg",
+        "/assets/user/image/product/p34.2.jpg"
       ],
       "soldQuantity": 30,
       "inStock": 60
     },
     {
       "id": 35,
-      "name": "Đầm Ôm",
+      "name": "Áo Dài Tứ Nguyệt",
       "categoryId": 2,
-      "subcategoryId": 3,
+      "subcategoryId": 2,
       "price": 750000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Party",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p35.1.jpg",
+        "/assets/user/image/product/p35.2.jpg",
+        "/assets/user/image/product/p35.3.jpg"
       ],
       "soldQuantity": 10,
       "inStock": 20
     },
     {
       "id": 36,
-      "name": "Đầm Ngủ",
+      "name": "Áo Khoác Kiểu",
       "categoryId": 2,
       "subcategoryId": 3,
       "price": 400000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p36.1.jpg",
+        "/assets/user/image/product/p36.2.jpg",
+        "/assets/user/image/product/p36.3.jpg"
       ],
       "soldQuantity": 12,
       "inStock": 15
     },
     {
       "id": 37,
-      "name": "Đầm Bầu",
+      "name": "Vest Tay Ngắn Dáng Suông",
       "categoryId": 2,
       "subcategoryId": 3,
       "price": 600000,
       "salePrice": 550000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p37.1.jpg",
+        "/assets/user/image/product/p37.2.jpg",
+        "/assets/user/image/product/p37.3.jpg"
       ],
       "soldQuantity": 18,
       "inStock": 25
     },
     {
       "id": 38,
-      "name": "Đầm Chữ A",
+      "name": "Áo Vest Chiết Eo",
       "categoryId": 2,
       "subcategoryId": 3,
       "price": 650000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Party",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p38.1.jpg",
+        "/assets/user/image/product/p38.2.jpg",
+        "/assets/user/image/product/p38.3.jpg"
       ],
       "soldQuantity": 8,
       "inStock": 12
     },
     {
       "id": 39,
-      "name": "Đầm Hè",
+      "name": "Gilet",
       "categoryId": 2,
       "subcategoryId": 3,
       "price": 500000,
       "salePrice": 470000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p39.1.jpg",
+        "/assets/user/image/product/p39.2.jpg",
+        "/assets/user/image/product/p39.3.jpg"
       ],
       "soldQuantity": 20,
       "inStock": 30
     },
     {
       "id": 40,
-      "name": "Đầm Thun",
+      "name": "Áo Khoác Dạ",
       "categoryId": 2,
       "subcategoryId": 3,
       "price": 550000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p40.1.jpg",
+        "/assets/user/image/product/p40.2.jpg",
+        "/assets/user/image/product/p40.3.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 25
     },
     {
       "id": 41,
-      "name": "Chân Váy Xòe",
+      "name": "Áo Khoác Dài",
       "categoryId": 2,
-      "subcategoryId": 4,
+      "subcategoryId": 3,
       "price": 400000,
       "salePrice": 380000,
       "isSale": true,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p41.1.jpg",
+        "/assets/user/image/product/p41.2.jpg",
+        "/assets/user/image/product/p41.3.jpg"
       ],
       "soldQuantity": 22,
       "inStock": 35
     },
     {
       "id": 42,
-      "name": "Chân Váy Dài",
+      "name": "Áo Khoác Măng Tô",
       "categoryId": 2,
-      "subcategoryId": 4,
+      "subcategoryId": 3,
       "price": 450000,
       "salePrice": null,
       "isSale": false,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 20,
       "inStock": 40
@@ -950,12 +961,12 @@
       "salePrice": 480000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p43.1.png",
+        "/assets/user/image/product/p43.2.png",
+        "/assets/user/image/product/p43.3.png"
       ],
       "image": "path_to_image43.jpg",
       "soldQuantity": 18,
@@ -963,133 +974,130 @@
     },
     {
       "id": 44,
-      "name": "Chân Váy Jeans",
+      "name": "Áo Len Sát Nách",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 550000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p44.1.jpg",
+        "/assets/user/image/product/p44.2.jpg",
+        "/assets/user/image/product/p44.3.jpg"
       ],
       "soldQuantity": 10,
       "inStock": 20
     },
     {
       "id": 45,
-      "name": "Chân Váy Dạ Hội",
+      "name": "Áo Khoác Len Vặn Thừng",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 650000,
       "salePrice": 600000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Party",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p45.1.jpg",
+        "/assets/user/image/product/p45.2.jpg",
+        "/assets/user/image/product/p45.3.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 25
     },
     {
       "id": 46,
-      "name": "Chân Váy Bầu",
+      "name": "Áo Len Cổ Lọ",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 500000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p46.1.jpg",
+        "/assets/user/image/product/p46.2.jpg"
       ],
       "soldQuantity": 20,
       "inStock": 30
     },
     {
       "id": 47,
-      "name": "Chân Váy Midi",
+      "name": "Áo Len Tay Bồng",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 600000,
       "salePrice": 580000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p47.1.jpg",
+        "/assets/user/image/product/p47.2.jpg"
       ],
       "soldQuantity": 12,
       "inStock": 18
     },
     {
       "id": 48,
-      "name": "Chân Váy Ngắn",
+      "name": "Áo Len Cổ Tròn",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 400000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p48.1.jpg",
+        "/assets/user/image/product/p48.2.jpg"
       ],
       "soldQuantity": 25,
       "inStock": 35
     },
     {
       "id": 49,
-      "name": "Chân Váy Bút Chì Lưng Cao",
+      "name": "Áo Len Cộc Tay",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 550000,
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p49.1.jpg",
+        "/assets/user/image/product/p49.2.jpg"
       ],
       "soldQuantity": 5,
       "inStock": 10
     },
     {
       "id": 50,
-      "name": "Áo Phông Hình Gấu",
+      "name": "Áo Len Kẻ Sọc",
       "categoryId": 2,
       "subcategoryId": 4,
       "price": 600000,
       "salePrice": 570000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Party",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p50.1.jpg",
+        "/assets/user/image/product/p50.2.jpg",
+        "/assets/user/image/product/p50.3.jpg",
+        "/assets/user/image/product/p50.4.jpg"
       ],
       "soldQuantity": 15,
       "inStock": 20
@@ -1103,12 +1111,14 @@
       "salePrice": 650000,
       "isSale": true,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p51.1.png",
+        "/assets/user/image/product/p51.2.png",
+        "/assets/user/image/product/p51.3.png",
+        "/assets/user/image/product/p51.4.png",
+        "/assets/user/image/product/p51.5.png"
       ],
       "soldQuantity": 40,
       "inStock": 60
@@ -1122,12 +1132,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": false,
-      "occasion": "Đi làm",
+      "status": "Activate",
+      "occasion": "Đi chơi",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p52.1.png",
+        "/assets/user/image/product/p52.2.png",
+        "/assets/user/image/product/p52.3.png"
       ],
       "soldQuantity": 15,
       "inStock": 30
@@ -1141,12 +1151,12 @@
       "salePrice": 700000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p53.1.png",
+        "/assets/user/image/product/p53.2.png",
+        "/assets/user/image/product/p53.3.png"
       ],
       "soldQuantity": 20,
       "inStock": 45
@@ -1160,12 +1170,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p54.1.png",
+        "/assets/user/image/product/p54.2.png",
+        "/assets/user/image/product/p54.3.png",
+        "/assets/user/image/product/p54.4.png"
       ],
       "soldQuantity": 35,
       "inStock": 55
@@ -1179,12 +1190,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p55.1.png",
+        "/assets/user/image/product/p55.2.png",
+        "/assets/user/image/product/p55.3.png",
+        "/assets/user/image/product/p55.4.png"
       ],
       "soldQuantity": 28,
       "inStock": 40
@@ -1198,11 +1210,12 @@
       "salePrice": 520000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p56.1.png",
-        "../assets/user/image/product/p56.2.png",
-        "../assets/user/image/product/p56.3.png"
+        "/assets/user/image/product/p56.1.png",
+        "/assets/user/image/product/p56.2.png",
+        "/assets/user/image/product/p56.3.png"
       ],
       "soldQuantity": 22,
       "inStock": 30
@@ -1216,12 +1229,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p57.1.png",
+        "/assets/user/image/product/p57.2.png",
+        "/assets/user/image/product/p57.3.png"
       ],
       "soldQuantity": 18,
       "inStock": 25
@@ -1235,12 +1248,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p58.1.png",
+        "/assets/user/image/product/p58.2.png",
+        "/assets/user/image/product/p58.3.png"
       ],
       "soldQuantity": 30,
       "inStock": 20
@@ -1254,12 +1267,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi làm",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p59.1.png",
+        "/assets/user/image/product/p59.2.png",
+        "/assets/user/image/product/p59.3.png"
       ],
       "soldQuantity": 10,
       "inStock": 15
@@ -1273,12 +1286,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": false,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p60.1.png",
+        "/assets/user/image/product/p60.2.png",
+        "/assets/user/image/product/p60.3.png"
       ],
       "soldQuantity": 25,
       "inStock": 35
@@ -1292,12 +1305,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p61.1.png",
+        "/assets/user/image/product/p61.2.png",
+        "/assets/user/image/product/p61.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 75
@@ -1311,12 +1324,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p62.1.png",
+        "/assets/user/image/product/p62.2.png",
+        "/assets/user/image/product/p62.3.png"
       ],
       "soldQuantity": 40,
       "inStock": 60
@@ -1330,12 +1343,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p63.1.png",
+        "/assets/user/image/product/p63.2.png",
+        "/assets/user/image/product/p63.3.png"
       ],
       "soldQuantity": 20,
       "inStock": 30
@@ -1346,15 +1359,15 @@
       "categoryId": 3,
       "subcategoryId": 4,
       "price": 250000,
-      "salePrice": null,
+      "salePrice": 200000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p64.1.png",
+        "/assets/user/image/product/p64.2.png",
+        "/assets/user/image/product/p64.3.png"
       ],
       "soldQuantity": 15,
       "inStock": 20
@@ -1368,12 +1381,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p65.1.png",
+        "/assets/user/image/product/p65.2.png",
+        "/assets/user/image/product/p65.3.png"
       ],
       "soldQuantity": 35,
       "inStock": 50
@@ -1384,15 +1397,14 @@
       "categoryId": 3,
       "subcategoryId": 4,
       "price": 600000,
-      "salePrice": null,
+      "salePrice": 500000,
       "isSale": true,
       "isNew": false,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p66.1.png",
+        "/assets/user/image/product/p66.2.png"
       ],
       "soldQuantity": 20,
       "inStock": 25
@@ -1406,12 +1418,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p67.1.png",
+        "/assets/user/image/product/p67.2.png",
+        "/assets/user/image/product/p67.3.png"
       ],
       "soldQuantity": 45,
       "inStock": 60
@@ -1425,12 +1437,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p68.1.png",
+        "/assets/user/image/product/p68.2.png",
+        "/assets/user/image/product/p68.3.png"
       ],
       "soldQuantity": 30,
       "inStock": 40
@@ -1444,12 +1456,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p69.1.png",
+        "/assets/user/image/product/p69.2.png",
+        "/assets/user/image/product/p69.3.png"
       ],
       "soldQuantity": 25,
       "inStock": 35
@@ -1463,12 +1475,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p70.1.png",
+        "/assets/user/image/product/p70.2.png",
+        "/assets/user/image/product/p70.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1482,12 +1494,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p71.1.png",
+        "/assets/user/image/product/p71.2.png",
+        "/assets/user/image/product/p71.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1501,12 +1513,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p72.1.png",
+        "/assets/user/image/product/p72.2.png",
+        "/assets/user/image/product/p72.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1520,12 +1532,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p73.1.png",
+        "/assets/user/image/product/p73.2.png",
+        "/assets/user/image/product/p73.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1539,12 +1551,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p74.1.png",
+        "/assets/user/image/product/p74.2.png",
+        "/assets/user/image/product/p74.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1558,12 +1570,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p75.1.png",
+        "/assets/user/image/product/p75.2.png",
+        "/assets/user/image/product/p75.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1577,12 +1589,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p76.1.png",
+        "/assets/user/image/product/p76.2.png",
+        "/assets/user/image/product/p76.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1596,12 +1608,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p77.1.png",
+        "/assets/user/image/product/p77.2.png",
+        "/assets/user/image/product/p77.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1615,12 +1627,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p78.1.png",
+        "/assets/user/image/product/p78.2.png",
+        "/assets/user/image/product/p78.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1634,12 +1646,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p79.1.png",
+        "/assets/user/image/product/p79.2.png",
+        "/assets/user/image/product/p79.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1653,12 +1665,11 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p80.1.png",
+        "/assets/user/image/product/p80.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1672,12 +1683,11 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
-      "occasion": "Casual",
+      "status": "Activate",
+      "occasion": "Đi tiệc",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p81.1.png",
+        "/assets/user/image/product/p81.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1691,12 +1701,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p82.1.png",
+        "/assets/user/image/product/p82.2.png",
+        "/assets/user/image/product/p82.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1710,12 +1720,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p83.1.png",
+        "/assets/user/image/product/p83.2.png",
+        "/assets/user/image/product/p83.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1729,12 +1739,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p84.1.png",
+        "/assets/user/image/product/p84.2.png",
+        "/assets/user/image/product/p84.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1748,12 +1758,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p85.1.png",
+        "/assets/user/image/product/p85.2.png",
+        "/assets/user/image/product/p85.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1767,12 +1777,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p86.1.png",
+        "/assets/user/image/product/p86.2.png",
+        "/assets/user/image/product/p86.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1786,12 +1796,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p87.1.png",
+        "/assets/user/image/product/p87.2.png",
+        "/assets/user/image/product/p87.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1805,12 +1815,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p88.1.png",
+        "/assets/user/image/product/p88.2.png",
+        "/assets/user/image/product/p88.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1824,12 +1834,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p89.1.png",
+        "/assets/user/image/product/p89.2.png",
+        "/assets/user/image/product/p89.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1843,12 +1853,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p90.1.png",
+        "/assets/user/image/product/p90.2.png",
+        "/assets/user/image/product/p90.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1862,12 +1872,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p91.1.png",
+        "/assets/user/image/product/p91.2.png",
+        "/assets/user/image/product/p91.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1881,12 +1891,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p92.1.png",
+        "/assets/user/image/product/p92.2.png",
+        "/assets/user/image/product/p92.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1900,12 +1910,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p93.1.png",
+        "/assets/user/image/product/p93.2.png",
+        "/assets/user/image/product/p93.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1919,12 +1929,12 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p94.1.png",
+        "/assets/user/image/product/p94.2.png",
+        "/assets/user/image/product/p94.3.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1938,12 +1948,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1957,12 +1968,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1976,12 +1988,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -1995,12 +2008,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -2014,12 +2028,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
@@ -2033,12 +2048,13 @@
       "salePrice": null,
       "isSale": false,
       "isNew": true,
+      "status": "Activate",
       "occasion": "Casual",
       "images": [
-        "../assets/user/image/product/p1.1.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png",
-        "../assets/user/image/product/p1.2.png"
+        "/assets/user/image/product/p1.1.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png",
+        "/assets/user/image/product/p1.2.png"
       ],
       "soldQuantity": 50,
       "inStock": 80
