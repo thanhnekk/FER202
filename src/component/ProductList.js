@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import ListAllButton from "./ListAllButton";
 
-const ProductList = ({ products, filterFn, title, isShowAll }) => {
+const ProductList = ({ products, filterFn, title, isShowAll, btnhref }) => {
   const [itemsToShow, setItemsToShow] = useState(12);
 
   useEffect(() => {
@@ -14,8 +14,10 @@ const ProductList = ({ products, filterFn, title, isShowAll }) => {
         setItemsToShow(4);
       } else if (width <= 1200) {
         setItemsToShow(6);
+      } else if (width <= 1440) {
+        setItemsToShow(8);
       } else {
-        setItemsToShow(12);
+        setItemsToShow(10);
       }
     };
 
@@ -33,6 +35,7 @@ const ProductList = ({ products, filterFn, title, isShowAll }) => {
           justifyContent: "center",
           flexWrap: "wrap",
         }}
+        className="product-card-grid"
       >
         {!isShowAll ? (
           <>
@@ -42,22 +45,30 @@ const ProductList = ({ products, filterFn, title, isShowAll }) => {
               )
               .slice(0, itemsToShow)
               .map((product, index) => (
-                <ProductCard
-                  product={product}
-                  index={index}
-                  type={
-                    title === "Hàng mới về"
-                      ? "New"
-                      : title === "Giảm giá"
-                      ? "Sale"
-                      : ""
-                  }
-                  key={index}
-                />
+                <a
+                  href={`/products/${product.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <ProductCard
+                    product={product}
+                    index={index}
+                    type={
+                      title === "Hàng mới về"
+                        ? "New"
+                        : title === "Giảm giá"
+                        ? "Sale"
+                        : ""
+                    }
+                    key={index}
+                  />
+                </a>
               ))}
-            <ListAllButton
-              text={`Xem tất cả sản phẩm ${title.toLowerCase()}`}
-            />
+            <div>
+              <ListAllButton
+                text={`Xem tất cả sản phẩm ${title.toLowerCase()}`}
+                href={btnhref}
+              />
+            </div>
           </>
         ) : (
           <>
@@ -66,18 +77,23 @@ const ProductList = ({ products, filterFn, title, isShowAll }) => {
                 (product) => product.status === "Activate" && filterFn(product)
               )
               .map((product, index) => (
-                <ProductCard
-                  product={product}
-                  index={index}
-                  type={
-                    title === "Hàng mới về"
-                      ? "New"
-                      : title === "Giảm giá"
-                      ? "Sale"
-                      : ""
-                  }
-                  key={index}
-                />
+                <a
+                  href={`/products/${product.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <ProductCard
+                    product={product}
+                    index={index}
+                    type={
+                      title === "Hàng mới về"
+                        ? "New"
+                        : title === "Giảm giá"
+                        ? "Sale"
+                        : ""
+                    }
+                    key={index}
+                  />
+                </a>
               ))}
           </>
         )}

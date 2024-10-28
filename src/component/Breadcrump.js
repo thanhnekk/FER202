@@ -1,4 +1,4 @@
-const Breadcrump = ({ text }) => {
+const Breadcrump = ({ prevtext, text }) => {
   return (
     <div
       className="bread-crumb"
@@ -21,6 +21,20 @@ const Breadcrump = ({ text }) => {
               Trang Chủ
             </a>
           </li>
+          {prevtext != null && (
+            <li className="breadcrumb-item" style={{ margin: "0" }}>
+              <a
+                href="/products/all"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontSize: "14px",
+                }}
+              >
+                {prevtext}
+              </a>
+            </li>
+          )}
           <li className="breadcrumb-item active" aria-current="page">
             {text}
           </li>

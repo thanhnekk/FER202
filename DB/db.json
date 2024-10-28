@@ -390,7 +390,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p13.1.png",
         "/assets/user/image/product/p13.2.png",
@@ -410,7 +410,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Sport",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p14.1.png",
         "/assets/user/image/product/p14.2.png",
@@ -429,7 +429,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p15.1.png",
         "/assets/user/image/product/p15.2.png",
@@ -448,7 +448,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi tiệc",
       "images": [
         "/assets/user/image/product/p16.1.png",
         "/assets/user/image/product/p16.2.png",
@@ -486,7 +486,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p18.1.png",
         "/assets/user/image/product/p18.2.png",
@@ -505,7 +505,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p19.1.png",
         "/assets/user/image/product/p19.2.png",
@@ -524,7 +524,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Đi làm",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p20.1.png",
         "/assets/user/image/product/p20.2.png",
@@ -581,7 +581,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p23.1.jpg",
         "/assets/user/image/product/p23.2.jpg",
@@ -600,7 +600,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p24.1.jpg",
         "/assets/user/image/product/p24.2.jpg",
@@ -657,7 +657,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p27.1.jpg",
         "/assets/user/image/product/p27.2.jpg",
@@ -695,7 +695,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p29.1.jpg",
         "/assets/user/image/product/p29.2.jpg",
@@ -828,7 +828,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p36.1.jpg",
         "/assets/user/image/product/p36.2.jpg",
@@ -847,7 +847,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p37.1.jpg",
         "/assets/user/image/product/p37.2.jpg",
@@ -866,7 +866,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Party",
+      "occasion": "Đi tiệc",
       "images": [
         "/assets/user/image/product/p38.1.jpg",
         "/assets/user/image/product/p38.2.jpg",
@@ -885,7 +885,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi tiệc",
       "images": [
         "/assets/user/image/product/p39.1.jpg",
         "/assets/user/image/product/p39.2.jpg",
@@ -904,7 +904,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p40.1.jpg",
         "/assets/user/image/product/p40.2.jpg",
@@ -923,7 +923,7 @@
       "isSale": true,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi làm",
       "images": [
         "/assets/user/image/product/p41.1.jpg",
         "/assets/user/image/product/p41.2.jpg",
@@ -962,13 +962,12 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Đi làm",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p43.1.png",
         "/assets/user/image/product/p43.2.png",
         "/assets/user/image/product/p43.3.png"
       ],
-      "image": "path_to_image43.jpg",
       "soldQuantity": 18,
       "inStock": 28
     },
@@ -982,7 +981,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p44.1.jpg",
         "/assets/user/image/product/p44.2.jpg",
@@ -1001,7 +1000,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Party",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p45.1.jpg",
         "/assets/user/image/product/p45.2.jpg",
@@ -1020,7 +1019,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p46.1.jpg",
         "/assets/user/image/product/p46.2.jpg"
@@ -1038,7 +1037,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Đi làm",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p47.1.jpg",
         "/assets/user/image/product/p47.2.jpg"
@@ -1056,7 +1055,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p48.1.jpg",
         "/assets/user/image/product/p48.2.jpg"
@@ -1074,7 +1073,7 @@
       "isSale": false,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Đi làm",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p49.1.jpg",
         "/assets/user/image/product/p49.2.jpg"
@@ -1092,7 +1091,7 @@
       "isSale": true,
       "isNew": false,
       "status": "Activate",
-      "occasion": "Party",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p50.1.jpg",
         "/assets/user/image/product/p50.2.jpg",
@@ -1112,7 +1111,7 @@
       "isSale": true,
       "isNew": true,
       "status": "Activate",
-      "occasion": "Casual",
+      "occasion": "Đi chơi",
       "images": [
         "/assets/user/image/product/p51.1.png",
         "/assets/user/image/product/p51.2.png",

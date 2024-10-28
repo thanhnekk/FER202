@@ -16,7 +16,7 @@ const AllProduct = () => {
   const [selectedPriceRange, setSelectedPriceRange] = useState([]);
   const [selectedOccasion, setSelectedOccasion] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(24);
+  const [productsPerPage] = useState(20);
   const [openFilter, setOpenFilter] = useState(false);
 
   useEffect(() => {
