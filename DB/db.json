@@ -1,4 +1,12 @@
 {
+  "users":[
+    {
+    "username": "na0945",
+    "email":"nguyetanh0945@gmail.com",
+    "password":"nguyetanh2311"
+  }
+    
+  ],
   "categories": [
     {
       "id": 1,
