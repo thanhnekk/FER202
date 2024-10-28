@@ -95,7 +95,7 @@ const ProductCard = ({ product, index, type }) => {
           transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
         }}
       />
-      <h6 style={{ margin: "10px 0" }}>{product.name}</h6>
+      <h6 style={{ margin: "10px 0", color: "black" }}>{product.name}</h6>
       <div>
         {product.salePrice ? (
           <span style={{ color: "red", fontWeight: "bold", fontSize: "15px" }}>

@@ -3,11 +3,13 @@ import ProductList from "./ProductList";
 
 const SaleProducts = ({ products }) => {
   return (
-    <div style={{
-      textAlign: "center",
-      backgroundColor: "#FEF9F0",
-      padding: "50px 0px",
-    }}>
+    <div
+      style={{
+        textAlign: "center",
+        backgroundColor: "#FEF9F0",
+        padding: "50px 0px",
+      }}
+    >
       <style>
         {`
           @import url('https://fonts.cdnfonts.com/css/the-halloween');`}
@@ -29,6 +31,7 @@ const SaleProducts = ({ products }) => {
         products={products}
         filterFn={(product) => product.isSale}
         title="Giảm giá"
+        btnhref="/products/sale"
       />
     </div>
   );

@@ -8,6 +8,7 @@ const NewArrivals = ({ products }) => {
         products={products}
         filterFn={(product) => product.isNew}
         title="Hàng mới về"
+        btnhref="/products/new"
       />
     </div>
   );

@@ -57,7 +57,7 @@ const OccasionTabs = ({ products }) => {
         />
       </div>
 
-      <ListAllButton text="Xem Tất Cả" />
+      <ListAllButton text="Xem Tất Cả" href="/products/all" />
     </ul>
   );
 };

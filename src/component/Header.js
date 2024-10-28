@@ -46,7 +46,19 @@ const Header = ({ categories }) => {
               fontWeight: "500",
             }}
           >
-            <li style={{ cursor: "pointer" }}>Hàng mới về</li>
+            <li>
+              {" "}
+              <a
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+                href="/products/new"
+              >
+                Hàng mới về
+              </a>
+            </li>
             <li>
               <a
                 style={{
@@ -91,7 +103,19 @@ const Header = ({ categories }) => {
                 </Dropdown.Menu>
               </Dropdown>
             </li>
-            <li style={{ cursor: "pointer" }}>Sale</li>
+            <li>
+              {" "}
+              <a
+                style={{
+                  cursor: "pointer",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+                href="/products/sale"
+              >
+                Sale
+              </a>
+            </li>
           </ul>
         </div>
 
