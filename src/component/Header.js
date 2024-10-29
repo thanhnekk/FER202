@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Offcanvas, Button } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import logo from "../logo.png";
+import { useNavigate } from "react-router-dom";
 const Header = ({ categories }) => {
   const [show, setShow] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
@@ -10,7 +11,14 @@ const Header = ({ categories }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleProducts = () => setShowProducts(!showProducts);
-
+  const isLoggedIn = (sessionStorage.getItem('account')!==null);
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    sessionStorage.removeItem('account');
+    alert('Bạn đã đăng xuất');
+    navigate('/');
+  }
+  console.log(isLoggedIn)
   return (
     <>
       <header
@@ -144,8 +152,30 @@ const Header = ({ categories }) => {
             className="d-flex align-items-center me-3"
             style={{ cursor: "pointer", fontSize: "1.5rem" }}
           >
-            <a href="/account">
-            <i className="bi bi-person"></i></a>
+             {isLoggedIn ? (
+                <Dropdown>
+                    <Dropdown.Toggle variant="link" id="dropdown-basic">
+                        <i className="bi bi-person" style={{ fontSize: '24px', color: 'blue' }}></i>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => navigate('/account')}>Tài khoản</Dropdown.Item>
+                        <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            ) : (
+
+                <Dropdown>
+                <Dropdown.Toggle variant="link" id="dropdown-basic">
+                    <i className="bi bi-person" style={{ fontSize: '24px', color: 'blue' }}></i>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item onClick={() => navigate('/login')}>Đăng nhập</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+            )}
+            
           </span>
           <span
             className="d-flex align-items-center"

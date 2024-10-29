@@ -5,6 +5,7 @@ import CategoryProducts from "./page/user/CategoryProduct";
 import AllSaleProduct from "./page/user/AllSaleProduct";
 import AllNewProduct from "./page/user/AllNewProduct";
 import ProductDetail from "./page/user/ProductDetail";
+import LogIn from "./page/user/LogIn";
 import Account from "./page/user/Account";
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           path="/products/category/:categoryId/subcategory/:subcategoryId"
           element={<CategoryProducts />}
         />
+        <Route path="/login" element={<LogIn/>}></Route>
         <Route path="/account" element={<Account/>}></Route>
       </Routes>
     </BrowserRouter>

@@ -1,71 +1,53 @@
+import React from 'react';
+import { useNavigate} from 'react-router-dom';
+import Header from '../../component/Header';
 import { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, Form, FormLabel } from "react-bootstrap";
-import Header from "../../component/Header";
-import Footer from "../../component/Footer";
-import React from "react";
 import axios from "axios";
-import ProductList from "../../component/ProductList";
-import Breadcrumb from "../../component/Breadcrump";
-import Filter from "../../component/Filter";
-import Paginated from "../../component/Pagination";
-import { useNavigate } from "react-router-dom";
-
+import Footer from '../../component/Footer';
 const Account = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    // Retrieve user data from session storage
+    const user = JSON.parse(sessionStorage.getItem('account'));
+    console.log(user);
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         axios.get("http://localhost:9999/categories").then((res) => {
           setCategories(res.data);
         });
       }, []);
-      const [users, setUsers] = useState([]);
-      useEffect(()=>{
-        axios.get("http://localhost:9999/users").then((res)=>{
-            setUsers(res.data);
-        });
-      },[]);
-      const navigate = useNavigate();
-    const handleLogin = (e) => {
-        e.preventDefault();
-        let check= false;
-        for(let u of users){
-            if(email===u.email&&password===u.password){
-                console.log('Đăng nhập thành công');
-                sessionStorage.setItem('account',u);
-                alert("Đăng nhập thành công!");
-                check=true;
-                navigate('/');
-                break;
-            }
-        }
-        if(!check){
-            alert('Sai email hoặc mật khẩu');
-            
-        }
-    }
-    return(
+    const addressOptions = user.address;
+    const [selectedAddress, setSelectedAddress] = useState(user.address);
+    return (
         <div>
-            <Header categories={categories}></Header>
-            <Container style={{marginBlock: "100px", paddingInline: "300px"}}>
-            <h1>Đăng nhập</h1>
-            <Form onSubmit={handleLogin}>
-                <Form.Group>
-                <Form.Label>Email: </Form.Label>
-                <Form.Control value={email} onChange={(e)=>setEmail(e.target.value)} type="email" required></Form.Control>
-                </Form.Group>
-                <Form.Group>
-                <Form.Label>Password: </Form.Label>
-                <Form.Control value={password} onChange={(e)=>setPassword(e.target.value)} type="password" required></Form.Control>
-                </Form.Group>
-                <Form.Group className="mt-3">
-                    <Button type="submit" className="btn btn-dark">Đăng nhập</Button>
-                </Form.Group>
-            </Form>
-            </Container>
-            <Footer></Footer>
+            <Header categories={categories}/>
+        
+        <div className="container" style={{ margin: "100px auto", maxWidth: "1000px" }}>
+            <h1>Tài Khoản của Tôi</h1>
+            <div className="card">
+                <div className="card-body">
+                    <h5 className="card-title">Thông Tin Cá Nhân</h5>
+                    <p><strong>Tên:</strong> {user.username}</p>
+                    <p><strong>Email:</strong> {user.email}</p>
+                    <p><strong>Số điện thoại:</strong> {user.phonenumber}</p>
+                    <p><strong>Địa chỉ:</strong> 
+                    <select
+                            value={selectedAddress}
+                            onChange={(e) => setSelectedAddress(e.target.value)}
+                            className="form-select"
+                        >
+                            {addressOptions.map((address, index) => (
+                                <option key={index} value={address}>
+                                    {address}
+                                </option>
+                            ))}
+                        </select></p>
+                </div>
+            </div>
+        </div>
+        <Footer/>
         </div>
     );
-}
-export default Account
+};
+
+export default Account;
