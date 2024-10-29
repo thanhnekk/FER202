@@ -1,9 +1,24 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import "../style/ProductCard.css";
+import { CartContext } from "../context/CardContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product, index, type }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
+  const handleAddToCart = () => {
+    const loggedInUser = sessionStorage.getItem("account");
+    if (!loggedInUser) {
+      alert("Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.");
+      navigate("/account");
+      return;
+    }
+    addToCart(product);
+    alert("Sản phẩm đã được thêm vào giỏ hàng.");
+  };
   return (
     <div
       key={index}
@@ -127,7 +142,13 @@ const ProductCard = ({ product, index, type }) => {
 
       {hoveredIndex === index && (
         <div className="product-card-buttons">
-          <button className="product-card-button">
+          <button
+            onClick={(event) => {
+              event.preventDefault();
+              handleAddToCart();
+            }}
+            className="product-card-button"
+          >
             <i className="bi bi-cart2"></i> Thêm vào giỏ
           </button>
           <button title="Xem nhanh" className="product-card-view-button">

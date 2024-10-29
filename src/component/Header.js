@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Offcanvas, Button } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import logo from "../logo.png";
-const Header = ({ categories }) => {
+import { CartContext } from "../context/CardContext";
+
+const Header = () => {
   const [show, setShow] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleProducts = () => setShowProducts(!showProducts);
+  const [categories, setCategories] = useState([]);
 
+  const { cart } = useContext(CartContext);
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  useEffect(() => {
+    axios.get("http://localhost:9999/categories").then((res) => {
+      setCategories(res.data);
+    });
+  }, []);
   return (
     <>
       <header
@@ -47,7 +58,6 @@ const Header = ({ categories }) => {
             }}
           >
             <li>
-              {" "}
               <a
                 style={{
                   cursor: "pointer",
@@ -104,7 +114,6 @@ const Header = ({ categories }) => {
               </Dropdown>
             </li>
             <li>
-              {" "}
               <a
                 style={{
                   cursor: "pointer",
@@ -145,13 +154,24 @@ const Header = ({ categories }) => {
             style={{ cursor: "pointer", fontSize: "1.5rem" }}
           >
             <a href="/account">
-            <i className="bi bi-person"></i></a>
+              <i className="bi bi-person"></i>
+            </a>
           </span>
           <span
-            className="d-flex align-items-center"
+            className="d-flex align-items-center position-relative"
             style={{ cursor: "pointer", fontSize: "1.5rem" }}
           >
-            <i className="bi bi-cart"></i>
+            <a href="/cart">
+              <i className="bi bi-cart"></i>
+              {totalItems > 0 && (
+                <span
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  style={{ fontSize: "0.75rem" }}
+                >
+                  {totalItems}
+                </span>
+              )}
+            </a>
           </span>
         </div>
       </header>

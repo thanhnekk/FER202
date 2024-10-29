@@ -1,16 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../style/ProductInfor.css";
 import RelateProduct from "./RelateProduct";
+import { CartContext } from "../context/CardContext";
+import { Button } from "react-bootstrap";
+
 const ProductInfor = ({ product, listproduct }) => {
   const [selectedImage, setSelectedImage] = useState(
     product.images && product.images.length > 0 ? product.images[0] : ""
   );
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useContext(CartContext);
+
   const handleQuantityChange = (type) => {
-    setQuantity((prev) =>
-      type === "increase" ? prev + 1 : prev > 1 ? prev - 1 : 1
-    );
+    setQuantity((prev) => {
+      if (type === "increase") {
+        return prev < product.inStock ? prev + 1 : prev;
+      } else {
+        return prev > 1 ? prev - 1 : 1;
+      }
+    });
   };
+
+  const handleAddToCart = () => {
+    if (product.inStock > 0) {
+      addToCart({ ...product, quantity });
+      alert("Sản phẩm đã được thêm vào giỏ hàng!");
+    } else {
+      alert("Sản phẩm hiện đã hết hàng.");
+    }
+  };
+
   useEffect(() => {
     if (product.images && product.images.length > 0) {
       setSelectedImage(product.images[0]);
@@ -42,7 +61,7 @@ const ProductInfor = ({ product, listproduct }) => {
         <div className="product-detail">
           <h3>{product.name}</h3>
           <h5>
-            Mã sản phẩm : {product.id} | Tình trạng:{" "}
+            Mã sản phẩm: {product.id} | Tình trạng:{" "}
             {product.inStock > 0 ? "Còn Hàng" : "Hết Hàng"}
           </h5>
           <table className="product-info-table">
@@ -76,14 +95,24 @@ const ProductInfor = ({ product, listproduct }) => {
                     className="quantity-selector"
                     style={{ marginLeft: "20px" }}
                   >
-                    <button onClick={() => handleQuantityChange("decrease")}>
+                    <Button
+                      variant="light"
+                      onClick={() => handleQuantityChange("decrease")}
+                    >
                       <i className="bi bi-dash-lg"></i>
-                    </button>
-                    <input type="text" value={quantity} readOnly />
-                    <button onClick={() => handleQuantityChange("increase")}>
+                    </Button>
+                    <span className="quantity-display">{quantity}</span>
+                    <Button
+                      variant="light"
+                      onClick={() => handleQuantityChange("increase")}
+                      disabled={quantity >= product.inStock}
+                    >
                       <i className="bi bi-plus-lg"></i>
-                    </button>
+                    </Button>
                   </div>
+                  <small className="text-muted">
+                    {product.inStock} sản phẩm có sẵn
+                  </small>
                 </td>
               </tr>
             </tbody>
@@ -96,8 +125,10 @@ const ProductInfor = ({ product, listproduct }) => {
               marginTop: "20px",
             }}
           >
-            <button className="add-to-cart-btn">Thêm vào giỏ</button>
-            <button className="buy-now-btn">Mua ngay</button>
+            <Button className="add-to-cart-btn" onClick={handleAddToCart}>
+              Thêm vào giỏ
+            </Button>
+            <Button className="buy-now-btn">Mua ngay</Button>
           </div>
 
           <hr className="separator" />

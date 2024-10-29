@@ -1,0 +1,172 @@
+/* Đặt bố cục chính cho trang checkout */
+.checkout-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.checkout-items {
+  margin-bottom: 20px;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.checkout-item h4 {
+  font-size: 1.1em;
+  margin: 0;
+  color: #333;
+}
+
+.checkout-item p {
+  font-size: 1em;
+  margin: 0;
+  color: #777;
+}
+
+/* Địa chỉ giao hàng */
+.address-select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-address {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.address-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-address-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-address-btn:hover {
+  background-color: #218838;
+}
+
+/* Phương thức thanh toán */
+.payment-methods {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+}
+
+.payment-methods input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Nút hoàn tất đơn hàng */
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 15px;
+  }
+
+  .checkout-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkout-item h4 {
+    font-size: 1.2em;
+  }
+
+  .checkout-item p {
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  .address-input,
+  .add-address-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .checkout-btn {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-container h2 {
+    font-size: 1.5em;
+  }
+
+  .checkout-item h4 {
+    font-size: 1.1em;
+  }
+
+  .checkout-item p {
+    font-size: 0.95em;
+  }
+
+  .address-select {
+    font-size: 0.95em;
+  }
+
+  .checkout-btn {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
