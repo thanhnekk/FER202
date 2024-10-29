@@ -1,12 +1,4 @@
 {
-  "users":[
-    {
-    "username": "na0945",
-    "email":"nguyetanh0945@gmail.com",
-    "password":"nguyetanh2311"
-  }
-    
-  ],
   "categories": [
     {
       "id": 1,
@@ -2071,11 +2063,22 @@
     {
       "id": 1,
       "username": "customer1",
+      "email": "nguyetanh0945@gmail.com",
+      "password": "nguyetanh2311",
+      "phonenumber": "0972427628",
+      "address" :[
+        "1999 Bui Vien, Kien An, Hai Phong, Viet Nam",
+        "661 Khuc Tri, Kien An, Hai Phong, Viet Nam",
+        "99 Dragon St. Los Angeles America"
+      ],
       "role": "customer"
     },
     {
       "id": 2,
       "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "phonenumber": "0972427629",
       "role": "admin"
     }
   ]
