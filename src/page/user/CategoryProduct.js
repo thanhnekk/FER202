@@ -108,7 +108,11 @@ const CategoryProduct = () => {
   return (
     <div>
       <Header categories={categories}></Header>
-      <Breadcrumb text={getCategoryName()} prevtext="Sản phẩm"></Breadcrumb>
+      <Breadcrumb
+        text={getCategoryName()}
+        prevtext="Sản phẩm"
+        prevlink="/products/all"
+      ></Breadcrumb>
       <div
         className="d-flex align-items-center justify-content-between"
         style={{ margin: "10px 50px" }}

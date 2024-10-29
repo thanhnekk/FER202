@@ -1,4 +1,4 @@
-const Breadcrump = ({ prevtext, text }) => {
+const Breadcrump = ({ prevtext, text, prevlink }) => {
   return (
     <div
       className="bread-crumb"
@@ -24,7 +24,7 @@ const Breadcrump = ({ prevtext, text }) => {
           {prevtext != null && (
             <li className="breadcrumb-item" style={{ margin: "0" }}>
               <a
-                href="/products/all"
+                href={prevlink}
                 style={{
                   textDecoration: "none",
                   color: "black",
