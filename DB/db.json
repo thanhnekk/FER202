@@ -2083,6 +2083,14 @@
       "password": "admin",
       "phonenumber": "0972427629",
       "role": "admin"
+    },
+    {
+      "id": 3,
+      "username": "Nguyet Anh",
+      "email": "anhbhnhe180164@fpt.edu.vn",
+      "password": "nguyetanh2311",
+      "phoneNumber": "0972427628",
+      "address": "999 Trieu Khuc, Ha Noi"
     }
   ]
 }

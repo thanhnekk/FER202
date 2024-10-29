@@ -5,6 +5,7 @@ import CategoryProducts from "./page/user/CategoryProduct";
 import AllSaleProduct from "./page/user/AllSaleProduct";
 import AllNewProduct from "./page/user/AllNewProduct";
 import ProductDetail from "./page/user/ProductDetail";
+import LogIn from "./page/user/LogIn";
 import Account from "./page/user/Account";
 import { CartProvider } from "../src/context/CardContext";
 import Cart from "./component/Cart";
@@ -39,6 +40,7 @@ function App() {
             element={<CategoryProducts />}
           />
           <Route path="/account" element={<Account />}></Route>
+          <Route path="/login" element={<LogIn />}></Route>
           <Route
             path="/admin/products"
             element={
