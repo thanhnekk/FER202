@@ -144,7 +144,8 @@ const Header = ({ categories }) => {
             className="d-flex align-items-center me-3"
             style={{ cursor: "pointer", fontSize: "1.5rem" }}
           >
-            <i className="bi bi-person"></i>
+            <a href="/account">
+            <i className="bi bi-person"></i></a>
           </span>
           <span
             className="d-flex align-items-center"
