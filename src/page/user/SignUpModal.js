@@ -41,9 +41,6 @@ const SignupModal = ({ show, handleClose }) => {
 
     return (
         <>
-            <Button show={show} onHide={handleClose}>
-                Đăng ký
-            </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

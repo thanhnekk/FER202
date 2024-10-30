@@ -6,12 +6,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import logo from "../logo.png";
 import { CartContext } from "../context/CardContext";
 import { useNavigate } from "react-router-dom";
-
+import SignupModal from "../page/user/SignUpModal";
 const Header = () => {
+  const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const loggedInUser = JSON.parse(sessionStorage.getItem("account"));
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleProducts = () => setShowProducts(!showProducts);
@@ -32,6 +33,41 @@ const Header = () => {
     navigate("/");
   };
   console.log(isLoggedIn);
+  const [showSignup, setShowSignup] = useState(false);
+  useEffect(() => {
+    axios.get("http://localhost:9999/products").then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
+  const removeAccents = (str) => {
+    const diacritics = [
+      { base: "a", letters: /[áàảãạâấầẩẫậăắằẳẵặ]/g },
+      { base: "e", letters: /[éèẻẽẹêếềểễệ]/g },
+      { base: "i", letters: /[íìỉĩị]/g },
+      { base: "o", letters: /[óòỏõọôốồổỗộơớờởỡợ]/g },
+      { base: "u", letters: /[úùủũụưứừửữự]/g },
+      { base: "y", letters: /[ýỳỷỹỵ]/g },
+      { base: "d", letters: /[đ]/g },
+    ];
+
+    diacritics.forEach(({ base, letters }) => {
+      str = str.replace(letters, base);
+    });
+
+    return str;
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const result = products.filter((product) => {
+      const lowercasedTerm = searchTerm.toLowerCase();
+      return (
+        removeAccents(product.name).toLowerCase().includes(lowercasedTerm) ||
+        removeAccents(product.occasion).toLowerCase().includes(lowercasedTerm)
+      );
+    });
+    navigate("/searchResult", { state: { products: result } });
+  };
+
   return (
     <>
       <header
@@ -139,24 +175,34 @@ const Header = () => {
         </div>
 
         {/* Search Box */}
-        <div className="searchbox d-none d-md-flex align-items-center mx-auto">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Tìm kiếm sản phẩm..."
-            style={{
-              width: "200px",
-              borderRadius: "20px",
-              padding: "0.375rem 0.75rem",
-              marginRight: "10px",
-            }}
-          />
-          <i
-            className="bi bi-search"
-            style={{ cursor: "pointer", fontSize: "1.5rem" }}
-          ></i>
-        </div>
-
+        <form onSubmit={handleSearch}>
+          <div className="searchbox d-none d-md-flex align-items-center mx-auto">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Tìm kiếm sản phẩm..."
+              style={{
+                width: "200px",
+                borderRadius: "20px",
+                padding: "0.375rem 0.75rem",
+                marginRight: "10px",
+              }}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button
+              className="bi bi-search"
+              style={{
+                cursor: "pointer",
+                fontSize: "1.5rem",
+                border: "none",
+                background: "transparent",
+                outline: "none",
+              }}
+              type="submit"
+            ></button>
+          </div>
+        </form>
         {/* Account and Cart */}
         <div className="account-cart d-flex align-items-center ms-auto">
           <span

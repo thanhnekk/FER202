@@ -18,6 +18,7 @@ import ProductManagement from "./page/admin/ProductManagement";
 import OrderManagement from "./page/admin/OrderManagement";
 import UpdateProduct from "./page/admin/UpdateProduct";
 import UserManagement from "./page/admin/UserManagement";
+import SearchResultsPage from "../src/page/user/SearchResultPage";
 function App() {
   return (
     <CartProvider>
@@ -38,6 +39,7 @@ function App() {
             path="/products/category/:categoryId"
             element={<CategoryProducts />}
           />
+          <Route path="/searchResult" element={<SearchResultsPage />}></Route>
           <Route
             path="/products/category/:categoryId/subcategory/:subcategoryId"
             element={<CategoryProducts />}
