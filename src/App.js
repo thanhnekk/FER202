@@ -7,6 +7,8 @@ import AllNewProduct from "./page/user/AllNewProduct";
 import ProductDetail from "./page/user/ProductDetail";
 import LogIn from "./page/user/LogIn";
 import Account from "./page/user/Account";
+import SearchResult from "./page/user/SearchResult";
+import SearchResultsPage from "./page/user/SearchResultPage";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +28,7 @@ function App() {
         />
         <Route path="/login" element={<LogIn/>}></Route>
         <Route path="/account" element={<Account/>}></Route>
+        <Route path="/searchResult" element={<SearchResultsPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );

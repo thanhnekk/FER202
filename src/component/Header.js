@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Offcanvas, Button } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import logo from "../logo.png";
 import { useNavigate } from "react-router-dom";
+import SignupModal from "../page/user/SignUpModal";
 const Header = ({ categories }) => {
+  const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
-
+  const [searchTerm, setSearchTerm] = useState('');
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleProducts = () => setShowProducts(!showProducts);
@@ -19,6 +22,42 @@ const Header = ({ categories }) => {
     navigate('/');
   }
   console.log(isLoggedIn)
+  const [showSignup, setShowSignup] = useState(false);
+  useEffect(() => {
+    axios.get("http://localhost:9999/products").then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
+  const removeAccents = (str) => {
+    const diacritics = [
+        { base: 'a', letters: /[áàảãạâấầẩẫậăắằẳẵặ]/g },
+        { base: 'e', letters: /[éèẻẽẹêếềểễệ]/g },
+        { base: 'i', letters: /[íìỉĩị]/g },
+        { base: 'o', letters: /[óòỏõọôốồổỗộơớờởỡợ]/g },
+        { base: 'u', letters: /[úùủũụưứừửữự]/g },
+        { base: 'y', letters: /[ýỳỷỹỵ]/g },
+        { base: 'd', letters: /[đ]/g },
+    ];
+
+    diacritics.forEach(({ base, letters }) => {
+        str = str.replace(letters, base);
+    });
+
+    return str;
+};
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const result= products.filter(product => {
+        const lowercasedTerm = searchTerm.toLowerCase();
+        return (
+            removeAccents(product.name).toLowerCase().includes(lowercasedTerm) ||
+            removeAccents(product.occasion).toLowerCase().includes(lowercasedTerm)
+        );
+    });
+    navigate('/searchResult', { state: { products: result } });
+};
+
+
   return (
     <>
       <header
@@ -128,6 +167,7 @@ const Header = ({ categories }) => {
         </div>
 
         {/* Search Box */}
+        <form onSubmit={handleSearch}>
         <div className="searchbox d-none d-md-flex align-items-center mx-auto">
           <input
             type="text"
@@ -139,13 +179,18 @@ const Header = ({ categories }) => {
               padding: "0.375rem 0.75rem",
               marginRight: "10px",
             }}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <i
+          <button
             className="bi bi-search"
-            style={{ cursor: "pointer", fontSize: "1.5rem" }}
-          ></i>
+            style={{ cursor: "pointer", fontSize: "1.5rem", border: "none", 
+              background: "transparent",
+              outline: "none" }}
+            type="submit"
+          ></button>
         </div>
-
+</form>
         {/* Account and Cart */}
         <div className="account-cart d-flex align-items-center ms-auto">
           <span
@@ -172,7 +217,10 @@ const Header = ({ categories }) => {
 
                 <Dropdown.Menu>
                     <Dropdown.Item onClick={() => navigate('/login')}>Đăng nhập</Dropdown.Item>
+                    <Dropdown.Item onClick={() => setShowSignup(true)}>Đăng kí</Dropdown.Item>
+                <SignupModal show={showSignup} handleClose={() => setShowSignup(false)} />
                 </Dropdown.Menu>
+            
             </Dropdown>
             )}
             
@@ -220,6 +268,7 @@ const Header = ({ categories }) => {
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
+      
     </>
   );
 };
