@@ -16,6 +16,8 @@ import AdminDashboard from "./page/admin/AdminDashboard";
 import AdminRoute from "../src/routes/AdminRoute";
 import ProductManagement from "./page/admin/ProductManagement";
 import OrderManagement from "./page/admin/OrderManagement";
+import UpdateProduct from "./page/admin/UpdateProduct";
+import UserManagement from "./page/admin/UserManagement";
 function App() {
   return (
     <CartProvider>
@@ -23,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/admin" element={<AdminDashboard />}></Route>
+          <Route path="/updateproduct/:id" element={<UpdateProduct />}></Route>
           <Route path="/profile" element={<UserProfile />}></Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/404" element={<NotFound />} />
@@ -46,6 +49,14 @@ function App() {
             element={
               <AdminRoute>
                 <ProductManagement />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/users"
+            element={
+              <AdminRoute>
+                <UserManagement />
               </AdminRoute>
             }
           />

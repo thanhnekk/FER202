@@ -21,7 +21,6 @@ const Account = () => {
   return (
     <div>
       <Header categories={categories} />
-
       <div
         className="container"
         style={{ margin: "100px auto", maxWidth: "1000px" }}
@@ -39,20 +38,22 @@ const Account = () => {
             <p>
               <strong>Số điện thoại:</strong> {user.phonenumber}
             </p>
-            <p>
-              <strong>Địa chỉ:</strong>
-              <select
-                value={selectedAddress}
-                onChange={(e) => setSelectedAddress(e.target.value)}
-                className="form-select"
-              >
-                {addressOptions.map((address, index) => (
-                  <option key={index} value={address}>
-                    {address}
-                  </option>
-                ))}
-              </select>
-            </p>
+            {user.address && (
+              <p>
+                <strong>Địa chỉ:</strong>
+                <select
+                  value={selectedAddress}
+                  onChange={(e) => setSelectedAddress(e.target.value)}
+                  className="form-select"
+                >
+                  {addressOptions.map((address, index) => (
+                    <option key={index} value={address}>
+                      {address}
+                    </option>
+                  ))}
+                </select>
+              </p>
+            )}
           </div>
         </div>
       </div>

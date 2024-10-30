@@ -8,7 +8,7 @@ import Footer from "../component/Footer";
 import Breadcrumb from "../component/Breadcrump";
 
 const Checkout = () => {
-  const { clearCart } = useContext(CartContext);
+  const { clearCart, removeFromCart } = useContext(CartContext);
   const [selectedAddress, setSelectedAddress] = useState("");
   const [user, setUser] = useState(null);
   const [newAddress, setNewAddress] = useState("");
@@ -39,7 +39,6 @@ const Checkout = () => {
     });
   }, []);
 
-  // Tính tổng tiền hàng và phí vận chuyển
   const totalAmount = selectedProducts.reduce(
     (acc, item) => acc + (item.salePrice || item.price) * item.quantity,
     0
@@ -47,7 +46,7 @@ const Checkout = () => {
   const shippingFee = totalAmount < 700000 ? 30000 : 0;
   const grandTotal = totalAmount + shippingFee;
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (!selectedAddress) {
       alert("Vui lòng chọn địa chỉ giao hàng!");
       return;
@@ -55,18 +54,29 @@ const Checkout = () => {
 
     const order = {
       id: Date.now(),
+      customerId: loggedInUser.id,
       items: selectedProducts,
       address: selectedAddress,
       date: new Date().toLocaleDateString(),
       paymentMethod: paymentMethod,
+      status: "Đang chờ",
       totalAmount,
       shippingFee,
       grandTotal,
     };
 
     console.log("Đơn hàng đã tạo:", order);
-    clearCart();
-    alert("Đơn hàng đã đặt thành công!");
+
+    try {
+      await axios.post("http://localhost:9999/orders", order);
+      selectedProducts.forEach((product) => removeFromCart(product.id));
+
+      alert("Đơn hàng đã đặt thành công!");
+      navigate("/");
+    } catch (error) {
+      console.error("Lỗi khi đặt hàng:", error);
+      alert("Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại!");
+    }
   };
 
   const handleAddNewAddress = async () => {
@@ -97,11 +107,7 @@ const Checkout = () => {
   return (
     <div>
       <Header />
-      <Breadcrumb
-        text="Checkout"
-        prevtext="Giỏ hàng"
-        prevlink="/cart"
-      ></Breadcrumb>
+      <Breadcrumb text="Checkout" prevtext="Giỏ hàng" prevlink="/cart" />
       <div className="checkout-container">
         <h2>Đặt hàng</h2>
         <div className="checkout-items">

@@ -23,7 +23,6 @@ const ProductManagement = () => {
   const [editProduct, setEditProduct] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [showAddModal, setShowAddModal] = useState(false);
-  const [showEditModal, setShowEditModal] = useState(false);
 
   useEffect(() => {
     axios.get("http://localhost:9999/products").then((res) => {
@@ -35,7 +34,16 @@ const ProductManagement = () => {
   }, []);
 
   const handleAddProduct = () => {
-    if (!newProduct.name || !newProduct.price || newProduct.inStock <= 0) {
+    if (
+      !newProduct.name ||
+      !newProduct.price ||
+      newProduct.inStock <= 0 ||
+      !newProduct.categoryId ||
+      !newProduct.subcategoryId ||
+      !newProduct.status ||
+      !newProduct.images ||
+      !newProduct.inStock
+    ) {
       alert("Vui lòng nhập đầy đủ thông tin sản phẩm.");
       return;
     }
@@ -61,21 +69,6 @@ const ProductManagement = () => {
 
   const handleEditProduct = (product) => {
     setEditProduct(product);
-    setShowEditModal(true);
-  };
-
-  const handleUpdateProduct = () => {
-    axios
-      .put(`http://localhost:9999/products/${editProduct.id}`, editProduct)
-      .then((res) => {
-        setProducts(
-          products.map((product) =>
-            product.id === editProduct.id ? res.data : product
-          )
-        );
-        setEditProduct(null);
-        setShowEditModal(false);
-      });
   };
 
   const handleDeleteProduct = (id) => {
@@ -92,13 +85,13 @@ const ProductManagement = () => {
       });
   };
 
-  const filteredProducts = products.filter((product) =>
+  const searchedProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <AdminRoute>
-      <div className="product-management">
+      <div className="product-management container">
         <h2>Quản Lý Sản Phẩm</h2>
 
         <input
@@ -117,43 +110,26 @@ const ProductManagement = () => {
               <th>Giá</th>
               <th>Giá Khuyến Mãi</th>
               <th>Số lượng</th>
-              <th>Danh mục</th>
-              <th>Trạng thái</th>
-              <th>Hình ảnh</th>
-              <th>Khuyến mãi</th>
               <th>Trạng thái</th>
               <th>Thao tác</th>
             </tr>
           </thead>
           <tbody>
-            {filteredProducts.map((product) => (
+            {searchedProducts.map((product) => (
               <tr key={product.id}>
                 <td>{product.name}</td>
                 <td>{product.price}₫</td>
                 <td>{product.salePrice ? `${product.salePrice}₫` : "N/A"}</td>
                 <td>{product.inStock}</td>
-                <td>
-                  {
-                    categories.find((cat) => cat.id === product.categoryId)
-                      ?.name
-                  }
-                  {" - "}
-                  {
-                    categories
-                      .find((cat) => cat.id === product.categoryId)
-                      ?.subcategories.find(
-                        (sub) => sub.id === product.subcategoryId
-                      )?.name
-                  }
-                </td>
                 <td>{product.status}</td>
-                <td>{product.images.join(", ")}</td>
-                <td>{product.isSale ? "Có" : "Không"}</td>
-                <td>{product.isNew ? "Mới" : "Không mới"}</td>
                 <td>
-                  <Button onClick={() => handleEditProduct(product)}>
-                    Chỉnh Sửa
-                  </Button>
+                  <a
+                    href={`/updateproduct/${product.id}`}
+                    className="btn btn-success"
+                    style={{ marginRight: "5px" }}
+                  >
+                    Update
+                  </a>
                   {product.status !== "Deleted" && (
                     <Button
                       variant="danger"
@@ -175,6 +151,7 @@ const ProductManagement = () => {
           </Modal.Header>
           <Modal.Body>
             <Form>
+              {/* Tên sản phẩm */}
               <Form.Group controlId="formProductName">
                 <Form.Label>Tên sản phẩm</Form.Label>
                 <Form.Control
@@ -186,6 +163,8 @@ const ProductManagement = () => {
                   }
                 />
               </Form.Group>
+
+              {/* Giá sản phẩm */}
               <Form.Group controlId="formProductPrice">
                 <Form.Label>Giá</Form.Label>
                 <Form.Control
@@ -197,6 +176,21 @@ const ProductManagement = () => {
                   }
                 />
               </Form.Group>
+
+              {/* Giá khuyến mãi */}
+              <Form.Group controlId="formProductSalePrice">
+                <Form.Label>Giá Khuyến Mãi</Form.Label>
+                <Form.Control
+                  type="number"
+                  placeholder="Nhập giá khuyến mãi nếu có"
+                  value={newProduct.salePrice || ""}
+                  onChange={(e) =>
+                    setNewProduct({ ...newProduct, salePrice: e.target.value })
+                  }
+                />
+              </Form.Group>
+
+              {/* Số lượng sản phẩm */}
               <Form.Group controlId="formProductStock">
                 <Form.Label>Số lượng</Form.Label>
                 <Form.Control
@@ -208,20 +202,40 @@ const ProductManagement = () => {
                   }
                 />
               </Form.Group>
+
+              {/* Trạng thái */}
+              <Form.Group controlId="formProductStatus">
+                <Form.Label>Trạng thái</Form.Label>
+                <Form.Control
+                  as="select"
+                  value={newProduct.status}
+                  onChange={(e) =>
+                    setNewProduct({ ...newProduct, status: e.target.value })
+                  }
+                >
+                  <option value="Activate">Kích hoạt</option>
+                  <option value="Deactivate">Hủy kích hoạt</option>
+                </Form.Control>
+              </Form.Group>
+
+              {/* Danh mục sản phẩm */}
               <Form.Group controlId="formProductCategory">
                 <Form.Label>Danh mục</Form.Label>
                 <Form.Control
                   as="select"
                   value={newProduct.categoryId}
-                  onChange={(e) =>
+                  onChange={(e) => {
+                    const categoryId = parseInt(e.target.value);
+                    const selectedCategory = categories.find(
+                      (cat) => cat.id === categoryId
+                    );
                     setNewProduct({
                       ...newProduct,
-                      categoryId: parseInt(e.target.value),
-                      subcategoryId: categories.find(
-                        (cat) => cat.id === parseInt(e.target.value)
-                      )?.subcategories[0].id, // Tự động chọn subcategory đầu tiên
-                    })
-                  }
+                      categoryId,
+                      subcategoryId:
+                        selectedCategory?.subcategories[0]?.id || 1,
+                    });
+                  }}
                 >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -230,6 +244,8 @@ const ProductManagement = () => {
                   ))}
                 </Form.Control>
               </Form.Group>
+
+              {/* Phân loại sản phẩm */}
               <Form.Group controlId="formProductSubcategory">
                 <Form.Label>Phân loại</Form.Label>
                 <Form.Control
@@ -243,7 +259,7 @@ const ProductManagement = () => {
                   }
                 >
                   {categories
-                    .find((cat) => cat.id === newProduct.categoryId)
+                    .find((cat) => cat.id === newProduct.categoryId.toString())
                     ?.subcategories.map((sub) => (
                       <option key={sub.id} value={sub.id}>
                         {sub.name}
@@ -251,7 +267,67 @@ const ProductManagement = () => {
                     ))}
                 </Form.Control>
               </Form.Group>
-              {/* Các trường thông tin khác cho sản phẩm */}
+
+              {/* Ảnh sản phẩm */}
+              <Form.Group controlId="formProductImages">
+                <Form.Label>Hình ảnh (URL, cách nhau dấu phẩy)</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Nhập URL hình ảnh, cách nhau dấu phẩy"
+                  value={newProduct.images.join(", ")}
+                  onChange={(e) => {
+                    const urls = e.target.value
+                      .split(",")
+                      .map((url) => url.trim());
+                    setNewProduct({
+                      ...newProduct,
+                      images: urls,
+                    });
+                  }}
+                />
+              </Form.Group>
+
+              {/* Số lượng đã bán */}
+              <Form.Group controlId="formSoldQuantity">
+                <Form.Label>Số lượng đã bán</Form.Label>
+                <Form.Control
+                  type="number"
+                  placeholder="Nhập số lượng đã bán"
+                  value={newProduct.soldQuantity}
+                  onChange={(e) =>
+                    setNewProduct({
+                      ...newProduct,
+                      soldQuantity: e.target.value,
+                    })
+                  }
+                />
+              </Form.Group>
+
+              {/* Sản phẩm mới */}
+              <Form.Group controlId="formIsNew">
+                <Form.Label>Sản phẩm mới</Form.Label>
+                <Form.Check
+                  type="checkbox"
+                  label="Đánh dấu là sản phẩm mới"
+                  checked={newProduct.isNew}
+                  onChange={(e) =>
+                    setNewProduct({ ...newProduct, isNew: e.target.checked })
+                  }
+                />
+              </Form.Group>
+
+              {/* Đang giảm giá */}
+              <Form.Group controlId="formIsSale">
+                <Form.Label>Giảm giá</Form.Label>
+                <Form.Check
+                  type="checkbox"
+                  label="Đánh dấu là sản phẩm đang giảm giá"
+                  checked={newProduct.isSale}
+                  onChange={(e) =>
+                    setNewProduct({ ...newProduct, isSale: e.target.checked })
+                  }
+                />
+              </Form.Group>
             </Form>
           </Modal.Body>
           <Modal.Footer>
@@ -263,107 +339,6 @@ const ProductManagement = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-
-        {/* Modal chỉnh sửa sản phẩm */}
-        {editProduct && (
-          <Modal show={showEditModal} onHide={() => setShowEditModal(false)}>
-            <Modal.Header closeButton>
-              <Modal.Title>Chỉnh Sửa Sản Phẩm</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group controlId="formEditProductName">
-                  <Form.Label>Tên sản phẩm</Form.Label>
-                  <Form.Control
-                    type="text"
-                    value={editProduct.name}
-                    onChange={(e) =>
-                      setEditProduct({ ...editProduct, name: e.target.value })
-                    }
-                  />
-                </Form.Group>
-                <Form.Group controlId="formEditProductPrice">
-                  <Form.Label>Giá</Form.Label>
-                  <Form.Control
-                    type="number"
-                    value={editProduct.price}
-                    onChange={(e) =>
-                      setEditProduct({ ...editProduct, price: e.target.value })
-                    }
-                  />
-                </Form.Group>
-                <Form.Group controlId="formEditProductStock">
-                  <Form.Label>Số lượng</Form.Label>
-                  <Form.Control
-                    type="number"
-                    value={editProduct.inStock}
-                    onChange={(e) =>
-                      setEditProduct({
-                        ...editProduct,
-                        inStock: e.target.value,
-                      })
-                    }
-                  />
-                </Form.Group>
-                <Form.Group controlId="formEditProductCategory">
-                  <Form.Label>Danh mục</Form.Label>
-                  <Form.Control
-                    as="select"
-                    value={editProduct.categoryId}
-                    onChange={(e) =>
-                      setEditProduct({
-                        ...editProduct,
-                        categoryId: parseInt(e.target.value),
-                        subcategoryId: categories.find(
-                          (cat) => cat.id === parseInt(e.target.value)
-                        )?.subcategories[0].id, // Tự động chọn subcategory đầu tiên
-                      })
-                    }
-                  >
-                    {categories.map((category) => (
-                      <option key={category.id} value={category.id}>
-                        {category.name}
-                      </option>
-                    ))}
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group controlId="formEditProductSubcategory">
-                  <Form.Label>Phân loại</Form.Label>
-                  <Form.Control
-                    as="select"
-                    value={editProduct.subcategoryId}
-                    onChange={(e) =>
-                      setEditProduct({
-                        ...editProduct,
-                        subcategoryId: parseInt(e.target.value),
-                      })
-                    }
-                  >
-                    {categories
-                      .find((cat) => cat.id === editProduct.categoryId)
-                      ?.subcategories.map((sub) => (
-                        <option key={sub.id} value={sub.id}>
-                          {sub.name}
-                        </option>
-                      ))}
-                  </Form.Control>
-                </Form.Group>
-                {/* Các trường khác */}
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button
-                variant="secondary"
-                onClick={() => setShowEditModal(false)}
-              >
-                Đóng
-              </Button>
-              <Button variant="primary" onClick={handleUpdateProduct}>
-                Cập Nhật
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        )}
       </div>
     </AdminRoute>
   );

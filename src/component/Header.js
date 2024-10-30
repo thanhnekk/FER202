@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
+  const loggedInUser = JSON.parse(sessionStorage.getItem("account"));
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -172,9 +173,21 @@ const Header = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={() => navigate("/account")}>
-                    Tài khoản
-                  </Dropdown.Item>
+                  {loggedInUser.role === "customer" && (
+                    <Dropdown.Item onClick={() => navigate("/profile")}>
+                      Tài khoản
+                    </Dropdown.Item>
+                  )}
+                  {loggedInUser.role === "admin" && (
+                    <Dropdown.Item onClick={() => navigate("/account")}>
+                      Tài khoản
+                    </Dropdown.Item>
+                  )}
+                  {loggedInUser.role === "admin" && (
+                    <Dropdown.Item onClick={() => navigate("/admin")}>
+                      Quản lý
+                    </Dropdown.Item>
+                  )}
                   <Dropdown.Item onClick={handleLogout}>
                     Đăng xuất
                   </Dropdown.Item>
@@ -197,22 +210,24 @@ const Header = () => {
               </Dropdown>
             )}
           </span>
-          <span
-            className="d-flex align-items-center position-relative"
-            style={{ cursor: "pointer", fontSize: "1.5rem" }}
-          >
-            <a href="/cart">
-              <i className="bi bi-cart"></i>
-              {totalItems > 0 && (
-                <span
-                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  style={{ fontSize: "0.75rem" }}
-                >
-                  {totalItems}
-                </span>
-              )}
-            </a>
-          </span>
+          {loggedInUser !== null && loggedInUser.role === "customer" && (
+            <span
+              className="d-flex align-items-center position-relative"
+              style={{ cursor: "pointer", fontSize: "1.5rem" }}
+            >
+              <a href="/cart">
+                <i className="bi bi-cart"></i>
+                {totalItems > 0 && (
+                  <span
+                    className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    {totalItems}
+                  </span>
+                )}
+              </a>
+            </span>
+          )}
         </div>
       </header>
 
